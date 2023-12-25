@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "445780512728",
+    "project_id": "marhabauae-3102f",
+    "storage_bucket": "marhabauae-3102f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445780512728:android:a5fb527bb103433e412cad",
+        "android_client_info": {
+          "package_name": "technocode.kshkat.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "445780512728-g4386nhogqcpj12gcaf96a21s4ic8d51.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAL18-5t_7oGIOPVUBM7lAusiM8XT0oxpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "445780512728-g4386nhogqcpj12gcaf96a21s4ic8d51.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
