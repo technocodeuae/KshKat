@@ -12,6 +12,7 @@ import 'di/components/service_locator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+
 void setupBloc() {
   Bloc.observer = SimpleBlocObserver();
 }
