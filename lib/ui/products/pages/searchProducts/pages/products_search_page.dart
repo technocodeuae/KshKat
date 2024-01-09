@@ -127,7 +127,7 @@ class _ProductSearchPageState extends State<ProductSearchPage>
       ),
       backgroundColor: AppColors.appBarBGColor,
       automaticallyImplyLeading: false,
-      brightness: Brightness.light,
+      // brightness: Brightness.light,
       elevation: 0,
     );
 

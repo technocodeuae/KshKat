@@ -131,7 +131,7 @@ class _AllLatestProductPageState extends State<AllLatestProductPage>
       ),
       backgroundColor: AppColors.appBarBGColor,
       automaticallyImplyLeading: false,
-      brightness: Brightness.light,
+      // brightness: Brightness.light,
       centerTitle: true,
       elevation: 0,
     );

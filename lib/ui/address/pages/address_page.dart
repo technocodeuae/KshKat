@@ -168,8 +168,9 @@ class _AddressPageState extends State<AddressPage>
       ),
       automaticallyImplyLeading: false,
       backgroundColor: AppColors.appBarBGColor,
-      brightness: Brightness.light,
+      // brightness: Brightness.light,
       elevation: 0,
+
     );
 
     widthC = DeviceUtils.getScaledWidth(context, 1);

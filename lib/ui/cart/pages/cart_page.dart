@@ -161,7 +161,7 @@ class _CartPageState extends State<CartPage>
             Icons.arrow_back_ios_outlined,
             color: Colors.black,
           )),
-      brightness: Brightness.light,
+      // brightness: Brightness.light,
       elevation: 0,
     );
 

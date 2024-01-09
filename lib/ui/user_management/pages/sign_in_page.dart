@@ -111,7 +111,7 @@ class _LoginContentPageState extends State<LoginContentPage> {
     AppBar appBar = AppBar(
       // title: TopLoginLogoWidget(),
       backgroundColor: AppColors.transparent,
-      brightness: Brightness.light,
+      // brightness: Brightness.light,
       toolbarHeight: 0,
       elevation: 0,
     );

@@ -131,7 +131,7 @@ class _AllTopProductPageState extends State<AllTopProductPage>
       ),
       backgroundColor: AppColors.appBarBGColor,
       automaticallyImplyLeading: false,
-      brightness: Brightness.light,
+      // brightness: Brightness.light,
       centerTitle: true,
       elevation: 0,
     );

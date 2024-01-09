@@ -131,7 +131,7 @@ class _OrderDetailsPageState extends State<OrderDetailsPage>
       ),
       backgroundColor: AppColors.appBarBGColor,
       automaticallyImplyLeading: false,
-      brightness: Brightness.light,
+      // brightness: Brightness.light,
       elevation: 0,
     );
 

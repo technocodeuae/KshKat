@@ -127,7 +127,7 @@ class _ProductPageState extends State<ProductPage>
       ),
       backgroundColor: AppColors.appBarBGColor,
       automaticallyImplyLeading: false,
-      brightness: Brightness.light,
+      // brightness: Brightness.light,
       elevation: 0,
     );
 

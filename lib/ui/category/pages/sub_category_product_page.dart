@@ -132,7 +132,7 @@ class _SubCategoryProductPageState extends State<SubCategoryProductPage>
       ),
       backgroundColor: AppColors.appBarBGColor,
       automaticallyImplyLeading: false,
-      brightness: Brightness.light,
+      // brightness: Brightness.light,
       elevation: 0,
     );
 

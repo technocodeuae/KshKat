@@ -129,7 +129,7 @@ class _PickUpTimePageState extends State<PickUpTimePage>
       ),
       automaticallyImplyLeading: false,
       backgroundColor: AppColors.appBarBGColor,
-      brightness: Brightness.light,
+      // brightness: Brightness.light,
       elevation: 0,
     );
 

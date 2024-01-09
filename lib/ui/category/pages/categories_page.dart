@@ -138,7 +138,7 @@ class _CategoriesPageState extends State<CategoriesPage>
       ),
       backgroundColor: AppColors.appBarBGColor,
       automaticallyImplyLeading: false,
-      brightness: Brightness.light,
+      // brightness: Brightness.light,
       centerTitle: true,
       elevation: 0,
     );

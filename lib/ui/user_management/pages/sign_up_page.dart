@@ -65,7 +65,7 @@ class _SignUpContentPageState extends State<SignUpContentPage>
     AppBar appBar = AppBar(
       // title: TopLoginLogoWidget(),
       backgroundColor: AppColors.transparent,
-      brightness: Brightness.light,
+      // brightness: Brightness.light,
       toolbarHeight: 0,
       elevation: 0,
     );
