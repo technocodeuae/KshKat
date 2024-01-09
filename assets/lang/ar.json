@@ -261,5 +261,6 @@
   "favorite": "المفضلة",
   "account": "الحساب",
   "my_order":"طلباتي",
-  "categories": "الفئات"
+  "categories": "الفئات",
+  "delete_account":"حذف الحساب"
 }

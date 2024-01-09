@@ -260,11 +260,32 @@ class _AccountInfoPageState extends State<AccountInfoPage>
                             borderColor: AppColors.white,
                             onPressed: () {
                               showDialog(
-                                  context: context, builder: (context) => LogOutDialog());
+                                  context: context, builder: (context) => LogOutDialog(
+                                    isSignOut: true,
+                                  ));
                             },
                           ),
                           VerticalPadding(
                             percentage: 0.02,
+                          ),
+                           ButtonUserManagementWidget(
+                            width: width,
+                            child: Text(
+                              AppLocalizations.of(context).translate("delete_account"),
+                              style: appTextStyle.middleTSBasic
+                                  .copyWith(color: AppColors.black),
+                            ),
+                            backgroundColor: AppColors.white,
+                            height: 55,
+                            borderRadius: 10.0,
+                            borderColor: AppColors.white,
+                            onPressed: () {
+                              showDialog(
+                                  context: context, builder: (context) => LogOutDialog(
+                                    isSignOut: false,
+
+                                  ));
+                            },
                           ),
                         ],
                       ),

@@ -6,8 +6,10 @@ import 'package:erp/data/repo/user_management_repository.dart';
 import 'package:erp/di/components/service_locator.dart';
 import 'package:erp/utils/routes/routes.dart';
 
-
 class LogOutDialog extends StatefulWidget {
+  final bool isSignOut;
+
+  const LogOutDialog({super.key, required this.isSignOut});
 
   @override
   State<StatefulWidget> createState() => LogOutDialogState();
@@ -53,22 +55,32 @@ class LogOutDialogState extends State<LogOutDialog>
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   Text(
-                    AppLocalizations.of(context).translate('sign_out'),
+                    widget.isSignOut
+                        ? AppLocalizations.of(context).translate('sign_out')
+                        : AppLocalizations.of(context)
+                            .translate('delete_account'),
                     style: appTextStyle.subBigTSBasicBold
                         .copyWith(color: AppColors.mainColor),
                   ),
-                  VerticalPadding(percentage: 0.05,),
+                  VerticalPadding(
+                    percentage: 0.05,
+                  ),
                   Container(
                     margin: const EdgeInsets.only(
                         left: AppDimens.space2,
                         right: AppDimens.space2,
                         top: AppDimens.space2),
                     alignment: AlignmentDirectional.center,
-                    child: Text(AppLocalizations.of(context).translate('confirm_msg'),
-                        style: appTextStyle.normalTSBasicBold
-                            .copyWith(color: AppColors.black),textAlign: TextAlign.center,),
+                    child: Text(
+                      AppLocalizations.of(context).translate('confirm_msg'),
+                      style: appTextStyle.normalTSBasicBold
+                          .copyWith(color: AppColors.black),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
-                  VerticalPadding(percentage: 0.05,),
+                  VerticalPadding(
+                    percentage: 0.05,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
@@ -83,41 +95,51 @@ class LogOutDialogState extends State<LogOutDialog>
                                         borderRadius: BorderRadius.all(
                                           Radius.circular(AppRadius.radius6),
                                         ),
-                                      )
-                                  ),
+                                      )),
                                   child: Text(
-                                    AppLocalizations.of(context).translate('cancel'),
+                                    AppLocalizations.of(context)
+                                        .translate('cancel'),
                                     textAlign: TextAlign.center,
                                     style: appTextStyle.minTSBasic
                                         .copyWith(color: AppColors.white),
                                   ),
-                                  onPressed:(){
+                                  onPressed: () {
                                     Navigator.of(context).pop();
                                   }))),
                       Container(
                         child: ButtonTheme(
                             height: 35,
                             minWidth: 110,
-                            child:ElevatedButton(
+                            child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                     primary: AppColors.primaryColor,
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.all(
                                         Radius.circular(AppRadius.radius6),
                                       ),
-                                    )
-                                ),
+                                    )),
                                 child: Text(
                                   AppLocalizations.of(context).translate('ok'),
                                   textAlign: TextAlign.center,
                                   style: appTextStyle.minTSBasic
                                       .copyWith(color: AppColors.white),
                                 ),
-                                onPressed:()async{
-                                  UserManagementRepository _repository = getIt<UserManagementRepository>();
-                                 await _repository.signOut();
-                                 if(await _repository.signOut())
-                                   Navigator.of(context).pushNamedAndRemoveUntil(Routes.splash, (route) => false);
+                                onPressed: () async {
+                                  UserManagementRepository _repository =
+                                      getIt<UserManagementRepository>();
+                                  if (widget.isSignOut) {
+                                    await _repository.signOut();
+                                    if (await _repository.signOut())
+                                      Navigator.of(context)
+                                          .pushNamedAndRemoveUntil(
+                                              Routes.splash, (route) => false);
+                                  } else {
+                                    await _repository.deleteAccount();
+                                    if (await _repository.deleteAccount())
+                                      Navigator.of(context)
+                                          .pushNamedAndRemoveUntil(
+                                              Routes.splash, (route) => false);
+                                  }
                                 })),
                       ),
                     ],

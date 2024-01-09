@@ -262,7 +262,9 @@
   "favorite": "Favorite",
   "account": "Account",
   "my_order":"My Orders",
-  "categories": "Categories"
+  "categories": "Categories",
+  "delete_account":"Delete account"
+
 
 
 }

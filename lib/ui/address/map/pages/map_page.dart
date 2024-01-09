@@ -19,6 +19,7 @@ import '../../../../../di/components/service_locator.dart';
 import '../../../../../utils/device/device_utils.dart';
 import '../../../../../utils/routes/routes.dart';
 import '../../../../utils/device/app_uitls.dart';
+import '../../controller/address_controller.dart';
 import '../argument/MapArgument.dart';
 import '../controller/map_controller.dart';
 
@@ -35,6 +36,7 @@ class _MapPageState extends State<MapPage>
   GoogleMapController? controller;
   Set<Marker> markers = {};
   List<double> lanList = [20.5937, 78.9629];
+  AddressController addressController = Get.find();
 
   late LatLng _initialcameraposition;
   Location _location = Location();
@@ -46,6 +48,7 @@ class _MapPageState extends State<MapPage>
   TextEditingController _streetController = TextEditingController();
   TextEditingController _commentController = TextEditingController();
   TextEditingController _postalController = TextEditingController();
+  
 
   @override
   Widget build(BuildContext context) {
@@ -291,6 +294,8 @@ class _MapPageState extends State<MapPage>
                           'street': _streetController.text.toString(),
                           'latitude': _initialcameraposition.latitude,
                           'longitude': _initialcameraposition.longitude
+                        }).whenComplete(() {
+                           addressController.getAddress(_cancelToken);
                         });
                       }
                     },
