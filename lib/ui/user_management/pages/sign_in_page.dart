@@ -450,6 +450,7 @@ class _LoginContentPageState extends State<LoginContentPage> {
         context: context,
         builder: (context) {
           return AlertDialog(
+            backgroundColor: Colors.white,
             content: TextField(
               controller: _textResetController,
               textInputAction: TextInputAction.go,

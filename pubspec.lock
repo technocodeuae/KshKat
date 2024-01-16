@@ -29,10 +29,10 @@ packages:
     dependency: "direct main"
     description:
       name: another_flushbar
-      sha256: "7fc3a5e61f88dcf096d6637945c705fdd73cac011bda50103c649cd825621736"
+      sha256: "19bf9520230ec40b300aaf9dd2a8fefcb277b25ecd1c4838f530566965befc2a"
       url: "https://pub.dev"
     source: hosted
-    version: "1.10.29"
+    version: "1.12.30"
   archive:
     dependency: transitive
     description:
@@ -431,10 +431,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_screenutil
-      sha256: "8bc686a9e4db21d7e2c8a1761073f6dee088f3d8284a3ad812825bb398ae85a6"
+      sha256: "8cf100b8e4973dc570b6415a2090b0bfaa8756ad333db46939efc3e774ee100d"
       url: "https://pub.dev"
     source: hosted
-    version: "5.5.3+2"
+    version: "5.9.0"
   flutter_slidable:
     dependency: "direct main"
     description:
@@ -1460,4 +1460,4 @@ packages:
     version: "3.1.1"
 sdks:
   dart: ">=3.2.0-194.0.dev <4.0.0"
-  flutter: ">=3.0.0"
+  flutter: ">=3.10.0"

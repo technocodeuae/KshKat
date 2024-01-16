@@ -190,6 +190,7 @@ class _MapPageState extends State<MapPage>
                         address,
                         userInfo,
                         _initialcameraposition);
+
                   },
                 ),
               ),
@@ -212,6 +213,7 @@ class _MapPageState extends State<MapPage>
         context: context,
         builder: (context) {
           return AlertDialog(
+            backgroundColor: Colors.white,
             content: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -295,7 +297,9 @@ class _MapPageState extends State<MapPage>
                           'latitude': _initialcameraposition.latitude,
                           'longitude': _initialcameraposition.longitude
                         }).whenComplete(() {
-                           addressController.getAddress(_cancelToken);
+                          // addressController.getAddress(_cancelToken);
+                          // Navigator.of(context).pop();
+
                         });
                       }
                     },
@@ -304,6 +308,12 @@ class _MapPageState extends State<MapPage>
               )
             ],
           );
-        });
+        }).whenComplete(() {
+          print("object");
+      addressController.getAddress(_cancelToken);
+      setState(() {
+
+      });
+    });
   }
 }

@@ -273,6 +273,7 @@ class _MyProfilePageState extends State<MyProfilePage>
         else
           selectedRadio=3;
         return AlertDialog(
+          backgroundColor: Colors.white,
           content: StatefulBuilder(
             builder: (BuildContext context, StateSetter setState) {
               return Column(
