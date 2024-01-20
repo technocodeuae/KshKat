@@ -98,3 +98,7 @@ Future<void> setPreferredOrientations() {
     // DeviceOrientation.landscapeLeft,
   ]);
 }
+
+
+// <key>gyroscop</key>
+// 	    <true/>

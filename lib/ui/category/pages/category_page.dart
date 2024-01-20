@@ -180,7 +180,7 @@ class _CategoryPageState extends State<CategoryPage>
           crossAxisCount: 4,
           crossAxisSpacing: 12.sp,
           mainAxisSpacing: 12.sp,
-          childAspectRatio: 1.sp //size.aspectRatio * 2.5,
+          childAspectRatio: .4.sp //size.aspectRatio * 2.5,
           ),
       physics: const BouncingScrollPhysics(), //NeverScrollableScrollPhysics(),
       padding: EdgeInsets.all(15.sp),

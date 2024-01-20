@@ -152,6 +152,9 @@ class _AddressPageState extends State<AddressPage>
                                 myLocation, myLocationIos));
                         if (result == true) {
                           addressController.getAddress(_cancelToken);
+                          setState(() {
+
+                          });
                         }
                       }
                     },

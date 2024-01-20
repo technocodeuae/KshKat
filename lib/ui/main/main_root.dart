@@ -233,7 +233,7 @@ class _MainRootPageState extends State<MainRootPage>
     final iconColor = isSelected ? AppColors.dark_green : AppColors.mainGray;
     return AnimatedContainer(
       duration: Duration(milliseconds: 500),
-      width: 70,
+      width: 70.sp,
       height: 42.sp,
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 4.sp),
